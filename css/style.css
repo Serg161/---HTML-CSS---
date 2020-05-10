@@ -1,0 +1,528 @@
+﻿body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  background: #ffffff;
+  background: url("../img/contacts-fon-basic.png");
+  /*  Пример подключения изображения из папки  img
+  background-image: url("../img/bg-promo.png");
+  background-repeat: no-repeat;
+  background-position: center top;*/
+}
+
+.container {    /*Центровщик сайта, применим ко всему контексту.*/
+  width: 1020px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.main-header {
+  padding-top: 35px;
+  padding-bottom: 80px;
+  background-color: #ffffff;
+    background-image: url("../img/main-header.png");
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-top {
+  margin-bottom: 93px;
+
+}
+
+.header-top::after { /*Псевдораспорка*/
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.logo {
+  float: left;
+  width: 180px;
+
+}
+
+.logo img {
+  display: block;
+}
+
+.main-menu {
+  float: right;
+  width: 681px;
+  margin-top: 33px;
+
+}
+
+.main-menu ul {     /*Общие тили блока меню навигации*/
+  margin: 0;
+  margin-top: -8px;
+  padding: 0;
+  list-style: none;
+}
+
+.main-menu li {  /*Стили для каджого отдельного элемента списка навигации*/
+  font-family: Trebuchet MS,  sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 50px;
+  vertical-align: top;
+  font-size: 18px;
+  line-height: 24px;
+
+}
+
+.main-menu li:last-child{ /*Убираем отступ справа, что бы последний список поместился в блок.*/
+  margin-right: 0;
+}
+
+.main-menu a {       /*Устанавливаем цвет и убираем автомат подчеркивание*/
+  color: #fffffe;
+  text-decoration: none;
+}
+
+.main-menu a:hover {
+  text-decoration: underline;
+}
+
+.main-menu a:active {
+  text-decoration: none;
+  opacity: 0.3;
+}
+
+.btn {        /*Стили для кнопки в шапке сайта*/
+  display: inline-block;
+  margin-top: 27px;
+  width: 268px;
+  padding: 23px 26px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: Trebuchet MS,  sans-serif;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.btn-new {
+  background: #382d78;
+}
+
+.btn-new:hover {
+  background: #32296b;
+}
+
+.btn-new:active {
+  background: #32296b;
+  color: #6e6896;
+}
+
+.promo {              /*Стили для нижней части шапки страницы*/
+  position: relative;
+  z-index: 10;
+  width: 450px;
+}
+
+.promo::after{        /*Псевдо класс для расположения картинки в шапке сайта. Позиционируем относительно promo*/
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 380px;
+  width: 650px;
+  height: 450px;
+  background-image: url("../img/promo.png");
+  background-repeat: no-repeat;
+  z-index: -1;
+
+}
+
+.promo-title {
+  width: 425px;
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-family: Trebuchet MS,  sans-serif;
+  font-size: 45px;
+  line-height: 50px;
+  color: #fff;
+}
+
+.promo p {
+  width: 322px;
+  margin: 0;
+  margin-bottom: 23px;
+  color: #bcb3f2;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.features {          /* Основные значения блока.*/
+  padding-top: 50px;
+  padding-bottom: 45px;
+  background-color: #ededed;
+  background: url("../img/features-fon.png")
+}
+
+.features .container::after { /* Псевдораспорка */
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.features-item {       /* Расположил блоки по горизонтали*/
+  position: relative;
+  float: left;
+  width: 320px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
+.features-icon {       /* Установил иконку, задал размер и отступы выравнял по середине */
+  background: url("../img/icon-schedule.png") no-repeat;
+  width: 73px;
+  min-height: 67px;
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+
+.features-item:nth-child(1) .features-icon { /* 1я Иконка */
+  margin-left: 132px;
+}
+
+.features-item:nth-child(2) .features-icon { /* 2я Иконка */
+  background: url("../img/icon-work.png") no-repeat;
+}
+
+.features-item:nth-child(3) .features-icon{ /* 3я Иконка */
+  background: url("../img/icon-practice.png") no-repeat;
+}
+
+.features-title { /* Стили заголовков */
+  font-weight: bold;
+  font-family: Trebuchet MS;
+  margin: 0;
+  margin-top: 23px;
+  margin-bottom: 25px;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.features-item p { /* стили описания под заголовком */
+  margin: 0;
+  color: #555555;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+
+.main-table {     /* Общие стили для таблицы Форм обучения */
+  padding: 0;
+  margin: 0;
+  margin-top: -1px;
+  background-color: #ffffff;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.main-table .container { /* Задаем отступ между блоком promo  и таблицей */
+  margin-bottom: 70px;
+}
+.main-table .container::after { /* Псевдораспорка */
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.main-table h2{       /* Стили для заголовка таблицы */
+  padding: 0px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  font-family: Trebuchet MS;
+  font-size: 45px;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.table-schedule {      /* Схлопываем рамки в таблице */
+  width: 1020px;
+  border-collapse: collapse;
+  background-color: #ffffff;
+
+}
+
+.table-schedule td      { /*Делаем рамки и отступы у таблицы*/
+padding: 10px 30px;
+padding-bottom: 41px;
+padding-top:
+padding-right: 0;
+font-size: 18px;
+text-align: left;
+color: #404040;
+border: 2px solid #a8a8a8;
+}
+
+.table-name {      /* Установили ширину  */
+  width: 225px;
+}
+
+.table-year {
+  width: 130px;
+}
+
+.table-schedule .grey {
+  background-color: #ededed;
+  border-top: 2px solid #a6a6a6;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.table-schedule strong {
+  font-family: Trebuchet MS;
+  font-size: 22px;
+}
+
+.table-schedule .table-description {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+
+.contacts {
+    background-color: #efefef;
+    margin: -1px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+}
+
+.contacts .container{
+  color: #000000;
+  height: 479px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.contacts-title{
+  width: 1020px;
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 50px;
+  vertical-align: top;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.contacts-form {
+  float: left;
+  width: 639px;
+  padding: 0;
+  margin-top: 23px;
+}
+
+.contacts-form td {          /*Расстояние между полями*/
+  padding-bottom: 29px;
+
+}
+
+.contacts-form .submit { /*Обнуляем нижний паддинг у кнопки*/
+  padding-bottom: 13px;
+}
+
+
+.contacts-form .title {
+  margin: 0;
+  width: 100px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  vertical-align: top;
+  text-align: left;
+  font-family: Trebuchet MS;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.contacts-form .title-top {    /*Стили для графы ФИО*/
+  padding-top: 15px;
+  padding-left: 45px;
+  display: inline-block;
+  box-sizing: border-box;
+
+}
+
+.contacts-form .title-left {     /*Стили для графы Пол*/
+  padding-left: 51px;
+  display: inline-block;
+  box-sizing: border-box;
+
+}
+
+.contacts-form .field {
+  width: 470px;
+  padding-left: 0;
+}
+
+.contacts-form input[type="text"],    /*Поля формы*/
+.contacts-form textarea {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 515px;
+  padding: 15px 25px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Tahoma, sans-serif;
+  color: #555555;
+  line-height: 24px;
+  outline: none;
+  border: 2px solid #b2b2b2;
+  border-radius: 2px;
+  margin-top: 0;
+
+}
+
+.contacts-form input[type="text"]:hover,
+.contacts-form textarea:hover {
+  border: 2px solid #7f7f7f;
+}
+
+.contacts-form input[type="text"]:focus,
+.contacts-form textarea:focus {
+  border: 2px solid #382d78;
+}
+
+.contacts-form textarea {
+  min-height: 105px;
+  resize: none;
+}
+
+.contacts-form .btn {
+  width: 100%;
+  margin-top: -13px;
+  }
+
+.contacts-instruction {
+  float: right;
+  width: 320px;
+  padding-left: 0px;
+  padding-right: 1px;
+  margin-top: 23px;
+
+
+}
+
+.contacts-instruction h3 {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.contacts-instruction p {
+  margin: 0;
+  margin-bottom: 25px;
+  color: #555555;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts-instruction .contacts-alert {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.contacts-alert strong {
+  color: #000000;
+}
+
+.main-footer {         /*Общие стили для подвала*/
+  padding-top: 65px;
+  padding-bottom: 75px;
+  background-color: #2a2546;
+  /*background-image: url("../img/footer-fon.png");*/
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-top::after {   /*Псевдо распорка*/
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-address {        /*Расположение левой колонки с лого и адресом*/
+  float: left;
+  width: 300px;
+  margin-right: 40px;
+}
+
+.footer-address .logo {
+  float: none;
+}               /*Стили логотипа*/
+
+.footer-address p {
+  margin: 0;
+  margin-top: 78px;
+}         /*Стили для адреса компании*/
+
+.footer-menu {    /*Общие стили для левой колонки с меню и ссылками*/
+  float: left;
+  width: 180px;
+  margin-top: 25px;
+}
+
+.footer-menu:last-child {  /*Стили последнего пункта (Контакты)*/
+  float: right;
+  width: 135px;
+}
+
+.footer-menu h3 {
+  margin: 0;
+  margin-bottom: 35px;
+  font-family: Tahoma;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}      /*Стили для заголовков меню подвала*/
+
+.footer-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}      /*Обнуление отступов и скрытие маркеров у списка*/
+
+.footer-menu li {
+  margin-bottom: 26px;
+}        /*отступы между пунктами списка*/
+
+.footer-menu a {
+  color: #a39fbd;
+  font-family: Tahoma;
+  text-decoration: none;
+  font-size: 18px;
+}             /*Стили для ссылок пунктов меню подвала*/
+
+.footer-menu a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.footer-menu a:active {
+  text-decoration: none;
+  opacity: 0.3;
+}
